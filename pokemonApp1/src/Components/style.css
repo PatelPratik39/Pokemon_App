@@ -18,11 +18,13 @@ body{
 }
 .left-content{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr));
-    grid-gap:2rem;
+     grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr)); */
+    grid-gap:3rem;
 }
 .card{
     width: 300px;
+    height: 150px;
     background-color:#9EDEF9;
     border-radius: 1rem;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
@@ -39,17 +41,16 @@ body{
     position: fixed;
     top:100px;
     right: 10px;
-    text-shadow: 0 5px 5px rgba(0,0,0,0.4);
 }
 .right-content img{
     margin: 1.5rem;
-    height: 200px;
+    height: 160px;
 }
 .right-content h1{
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
-    text-shadow: 0 5px 5px rgba(0,0,0,0.7);
+    text-shadow: 0 5px 5px rgba(0,0,0,0.5);
 }
 .abilities{
     width: 70%;
@@ -57,23 +58,26 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
-    
+    margin-top: 2rem;
+    text-shadow: 0 5px 5px rgba(0,0,0,0.5);
 }
 .abilities .group{
     background-color: #b74555;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
     color: white;
     padding: 0.5rem;
     font-size: 12px;
     border-radius: 8px;
     margin-left: 1rem;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    
 }
 .base-stat{
     margin-top: 2rem;
+    text-shadow: 0 5px 5px rgba(0,0,0,0.5);
 }
 .btn-group{
     display: flex;
+    text-shadow: 0 5px 5px rgba(0,0,0,0.5);
 }
 .btn-group button{
     outline: none;
@@ -85,6 +89,6 @@ body{
     font-weight: bold;
     color: white;
     background-color: #b74555;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
     border-radius: 8px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
 }

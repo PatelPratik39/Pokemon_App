@@ -1,33 +1,90 @@
 import React from "react";
 
-const PokemonDetails = () => {
+const PokemonDetails = ({ data }) => {
   return (
     <>
-      <div>
-        <h1> Pokemon Details </h1>
-        <h2>Charmander</h2>
-        <img
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
-          alt="Charmander"
-        />
-        <div className="abilities">
-          <div className="group">
-            <h2>Blaze</h2>
+      {!data ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          <h1>{data.name}</h1>
+          <img
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`}
+            alt=""
+          />
+          <div className="abilities">
+            {data.abilities ? (
+              data.abilities.map((ability, index) => (
+                <div className="ability" key={index}>
+                  <h2>{ability.ability.name}</h2>
+                </div>
+              ))
+            ) : (
+              <p>No abilities available</p>
+            )}
           </div>
-          <div className="group">
-            <h2>solar-power</h2>
+          <div className="stats">
+            {data.stats ? (
+              data.stats.map((stat, index) => (
+                <div className="stat" key={index}>
+                  <h3>{stat.stat.name}: {stat.base_stat}</h3>
+                </div>
+              ))
+            ) : (
+              <p>No stats available</p>
+            )}
           </div>
-        </div>
-        <div className="base-stat">
-          <h3>Hp : 30</h3>
-          <h3>Attack : 52</h3>
-          <h3>Defense : 43</h3>
-          <h3>special-attack : 50</h3>
-          <h3>Speed</h3>
-        </div>
-      </div>
+        </>
+      )}
     </>
   );
 };
 
 export default PokemonDetails;
+
+
+// import React from "react";
+
+// const PokemonDetails = ({ data }) => {
+//   return (
+//     <>
+//       {!data ? (
+//         <p>Loading...</p>
+//       ) : (
+//         <>
+//           <h1>{data.name}</h1>
+//           <img
+//             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`}
+//             alt=""
+//           />
+//           <div className="abilities">
+//             {data.abilities ? (
+//               data.abilities.map((ability, index) => (
+//                 <div className="ability" key={index}>
+//                   <h2>{ability.ability.name}</h2>
+//                 </div>
+//               ))
+//             ) : (
+//               <p>No abilities available</p>
+//             )}
+//           </div>
+//           <div className="stats">
+//             {data.stats ? (
+//               data.stats.map((stat, index) => (
+//                 <div className="stat" key={index}>
+//                   <h3>
+//                     {stat.stat.name}: {stat.base_stat}
+//                   </h3>
+//                 </div>
+//               ))
+//             ) : (
+//               <p>No stats available</p>
+//             )}
+//           </div>
+//         </>
+//       )}
+//     </>
+//   );
+// };
+
+// export default PokemonDetails;

@@ -1,14 +1,59 @@
-import React from 'react'
+// import React from "react";
+// const Card = ({ pokemon, loading, infoPokemon }) => {
+//   // console.log(pokemon);
+//   return (
+//     <>
+//       {loading ? (
+//         <h1>Loading...</h1>
+//       ) : (
+//         pokemon.map((item) => {
+//           return (
+//             <>
+//               <div
+//                 className="card"
+//                 key={item.id}
+//                 onClick={() => infoPokemon(item)}
+//               >
+//                 <h2>{item.id}</h2>
+//                 <img src={item.sprites.front_default} alt="" />
+//                 <h2>{item.name}</h2>
+//               </div>
+//             </>
+//           );
+//         })
+//       )}
+//     </>
+//   );
+// };
+// export default Card;
 
-function Card() {
+import React from "react";
+const Card = ({ pokemon, loading, infoPokemon }) => {
+  // console.log(pokemon);
+  
   return (
     <>
-        <div className='card'>
-            <h1> 1</h1>
-            <img src='/charmander.png' alt='pockemon'/>
-        </div>
+      {loading ? (
+        <h1>Loading...</h1>
+      ) : (
+        pokemon.map((item) => {
+          return (
+            <>
+              <div
+                className="card"
+                key={item.id}
+                onClick={() => infoPokemon(item)}
+              >
+                <h2>{item.id}</h2>
+                <img src={item.sprites.front_default} alt="" />
+                <h2>{item.name}</h2>
+              </div>
+            </>
+          );
+        })
+      )}
     </>
-  )
-}
+  );
+};
+export default Card;
 
-export default Card
