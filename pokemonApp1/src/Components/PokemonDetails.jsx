@@ -15,7 +15,7 @@ const PokemonDetails = ({ data }) => {
           <div className="abilities">
             {data.abilities ? (
               data.abilities.map((ability, index) => (
-                <div className="ability" key={index}>
+                <div className="group" key={index}>
                   <h2>{ability.ability.name}</h2>
                 </div>
               ))
@@ -27,7 +27,7 @@ const PokemonDetails = ({ data }) => {
             {data.stats ? (
               data.stats.map((stat, index) => (
                 <div className="stat" key={index}>
-                  <h3>{stat.stat.name}: {stat.base_stat}</h3>
+                  <h3>{stat.stat.name} : {stat.base_stat}</h3>
                 </div>
               ))
             ) : (
