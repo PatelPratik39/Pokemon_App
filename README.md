@@ -1,3 +1,3 @@
 # Pokemon_App
 
-run command : ''' npm run dev
+run command : ' npm run dev
