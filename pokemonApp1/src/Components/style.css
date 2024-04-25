@@ -46,6 +46,7 @@ body{
     width: 300px;
     height: 150px;
     background-color:#032432;
+    color: aliceblue;
     /* background-color:#9EDEF9; */
     border-radius: 1rem;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
