@@ -14,6 +14,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'PokemonSolid', sans-serif; /* Use PokemonSolid font as default */
+  background-color: #FCEEC8; /* Set background color */
+  
 }
 
 h1 {
@@ -32,9 +34,14 @@ body{
     margin: auto;
     padding-top: 100px;
     display: flex;
+     flex-direction: column; /* Adjust layout for mobile */
+    align-items: center; /* Center align content */
+    /* font-family: 'PokemonSolid'; */
 }
 .left-content,.right-content{
     flex-basis: 50%;
+    width: 100%; /* Take full width on mobile */
+    text-align: center; /* Center align content */
 }
 .left-content{
     display: grid;
@@ -43,10 +50,13 @@ body{
     grid-gap:3rem;
 }
 .card{
+    width: 90%; /* Adjust width for mobile */
+    max-width: 300px; /* Limit width on larger screens */
     width: 300px;
     height: 150px;
     background-color:#032432;
     color: aliceblue;
+    margin: 20px auto; /* Add margin for spacing */
     /* background-color:#9EDEF9; */
     border-radius: 1rem;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
@@ -69,8 +79,12 @@ body{
     margin: 1.5rem;
     height: 220px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    width: 100%; /* Make image responsive */
+  max-width: 250px; /* Limit width on larger screens */
+  margin: 1.5rem 0; /* Adjust margin */
 }
 .right-content h1{
+    font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
@@ -83,12 +97,14 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    color: azure;
     text-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    flex-wrap: wrap;
 }
 .abilities .group{
     background-color: #b74555;
     color: white;
-    padding: 0.7rem;
+    padding: 0.5rem;
     font-size: 12px;
     border-radius: 8px;
     margin-left: 1rem;
@@ -102,6 +118,7 @@ body{
 .btn-group{
     display: flex;
     text-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    flex-wrap: wrap;
 }
 .btn-group button{
     outline: none;
@@ -115,4 +132,7 @@ body{
     background-color: #b74555;
     border-radius: 8px;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    width: 90%; /* Adjust width for mobile */
+  max-width: 200px; /* Limit width on larger screens */
+  margin: 0.5rem auto; /* Adjust margin */
 }
